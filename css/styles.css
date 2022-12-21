@@ -1,0 +1,23 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.pokedex-display {
+    overflow: scroll;
+    overflow-y: hidden;
+    border: 10px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    margin: 2% auto;
+    width: 40vw;
+    height: 40vw;
+}
