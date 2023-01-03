@@ -23,6 +23,23 @@ let pokemonRepository = (function () {
         return pokemonList;
     }
 
+    function showDetails(pokemon) {
+        console.log(pokemon);
+    }
+
+    function addListItem(pokemon) {
+        let pokeList = document.querySelector('ul');
+        let listItem = document.createElement('li');
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('pokemonbutton');
+        button.addEventListener('click', function (event) {
+            showDetails(pokemon);
+        })
+        listItem.appendChild(button);
+        pokeList.appendChild(listItem);
+    }
+
     return {
         add: add,
         getAll: getAll
