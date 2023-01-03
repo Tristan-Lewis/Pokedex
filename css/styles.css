@@ -1,5 +1,6 @@
 body {
     font-family: 'Press Start 2P', cursive;
+    background-color: rgb(189, 0, 25);
 }
 
 * {
@@ -9,15 +10,37 @@ body {
 h1 {
     text-align: center;
 }
+.pokedex-display-border {
+        width: 55vw;
+        height: 45vw;
+        margin: 2% auto 5px auto;
+        text-align: center;
+        border: 10px solid black;
+        border-radius: 2% 2% 2% 20%;
+        background-color: whitesmoke;
+}
 
 .pokedex-display {
-    overflow: hidden;
-    overflow-y: hidden;
-    border: 10px solid black;
-    border-radius: 10px;
-    padding: 10px;
+    background-color: rgb(70, 70, 206);
+    border: 8px solid black;
+    border-radius: 2%;
     text-align: center;
-    margin: 2% auto;
+    margin: 12% auto 5px auto;
     width: 40vw;
-    height: 40vw;
+    height: 30vw;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-y: scroll;
+}
+
+.pokedex-display::-webkit-scrollbar {
+    display: none;
+}
+.pokemonbutton {
+    margin: 20px auto;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
 }
