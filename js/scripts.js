@@ -50,10 +50,5 @@ let pokemonRepository = (function () {
 })();
 // Looping through Pokemon list array
 pokemonRepository.getAll().forEach(function (pokemon) {
-    // Conditional for adding text to Pokemon height
-    if (pokemon.height > 0.6) {
-        pokemon.height = pokemon.height + "-Wow, that's big!";
-    }
-    // Output Pokemon list to web page as block elements
-    document.write('<p>' + pokemon.name + " " + 'height: ' + pokemon.height + '</p>');
+    pokemonRepository.addListItem(pokemon);
 });
