@@ -24,9 +24,11 @@ let pokemonRepository = (function () {
     }
 
     function showDetails(pokemon) {
-        console.log(pokemon);
+        loadDetails(pokemon).then(function () {
+            console.log(pokemon);
+        });
     }
-
+    // Creates button for every pokemon
     function addListItem(pokemon) {
         let pokeList = document.querySelector('ul');
         let listItem = document.createElement('li');
@@ -39,13 +41,44 @@ let pokemonRepository = (function () {
         listItem.appendChild(button);
         pokeList.appendChild(listItem);
     }
+    // Fetch api data and convert to json, then assign data and add pokemon
+    function loadList() {
+        return fetch(apiUrl).then(function (response) {
+            return response.json();
+        }).then(function (json) {
+            json.results.forEach(function (item) {
+                let pokemon = {
+                    name: item.name,
+                    detailsUrl: item.url
+                };
+                add(pokemon);
+            });
+        }).catch(function (e) {
+            console.error(e);
+        })
+    }
+    // Fetch api data and convert to json, then assign data to item
+    function loadDetails(item) {
+        let url = item.detailsUrl;
+        return fetch(url).then(function (reponse) {
+            return response.json();
+        }).then(function (details) {
+            item.imageUrl = details.sprites.front_default;
+            item.height = details.height;
+            item.types = details.types;
+        }).catch(function (e) {
+            console.error(e);
+        })
+    }
 
     return {
         add: add,
         getAll: getAll,
         showDetails: showDetails,
-        addListItem: addListItem
-    }
+        addListItem: addListItem,
+        loadList: loadList,
+        loadDetails: loadDetails
+    };
 
 })();
 // Looping through Pokemon list array
