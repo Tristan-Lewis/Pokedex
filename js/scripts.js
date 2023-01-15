@@ -3,6 +3,7 @@ let pokemonRepository = (function () {
     // Array of Pokemon and their attributes as objects
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
+    let pokeList = document.querySelector('ul');
 
     function add(pokemon) {
         pokemonList.push(pokemon);
