@@ -86,3 +86,6 @@ ul {
    clear: both;
 }
 
+.invisible {
+    display: none;
+}
