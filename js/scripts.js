@@ -61,7 +61,6 @@ let pokemonRepository = (function () {
         button.classList.add('pokemonbutton', 'btn', 'btn-primary');
         button.addEventListener('click', function () {
             showDetails(pokemon);
-            pokeList.classList.toggle('invisible');
         })
         listItem.appendChild(button);
         pokeList.appendChild(pokemonNumber);
