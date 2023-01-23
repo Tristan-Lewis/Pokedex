@@ -58,8 +58,8 @@ let pokemonRepository = (function () {
         button.setAttribute('data-target', '#pokemonModal');
         button.setAttribute('data-toggle', 'modal');
         button.innerText = pokemon.name.toUpperCase();
-        button.classList.add('pokemonbutton');
-        button.addEventListener('click', function (event) {
+        button.classList.add('pokemonbutton', 'btn', 'btn-primary');
+        button.addEventListener('click', function () {
             showDetails(pokemon);
             pokeList.classList.toggle('invisible');
         })
@@ -75,7 +75,8 @@ let pokemonRepository = (function () {
             json.results.forEach(function (item) {
                 let pokemon = {
                     name: item.name,
-                    detailsUrl: item.url
+                    detailsUrl: item.url,
+                    number: item.id
                 };
                 add(pokemon);
             });
@@ -89,8 +90,9 @@ let pokemonRepository = (function () {
         return fetch(url).then(function (response) {
             return response.json();
         }).then(function (details) {
-            item.imageUrl = details.sprites.front_default;
+            item.imageUrl = details.sprites.versions["generation-i"]["red-blue"].front_default
             item.height = details.height;
+            item.weight = details.weight;
             item.types = details.types;
         }).catch(function (e) {
             console.error(e);
