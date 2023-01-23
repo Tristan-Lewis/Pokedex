@@ -3,6 +3,7 @@ let pokemonRepository = (function () {
     // Array of Pokemon and their attributes as objects
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
+    let numberCounter = 1;
 
     function add(pokemon) {
         pokemonList.push(pokemon);
@@ -38,8 +39,24 @@ let pokemonRepository = (function () {
     function addListItem(pokemon) {
         let pokeList = document.querySelector('ul');
         let listItem = document.createElement('li');
+        let pokemonNumber = document.createElement('p');
         let button = document.createElement('button');
 
+        if (numberCounter < 10) {
+            pokemonNumber.innerText = "00" + numberCounter;
+        }
+        else if (numberCounter < 100) {
+            pokemonNumber.innerText = "0" + numberCounter;
+        }
+        else {
+            pokemonNumber.innerText = numberCounter;
+        }
+        numberCounter++;
+
+        listItem.classList.add('group-list-item');
+
+        button.setAttribute('data-target', '#pokemonModal');
+        button.setAttribute('data-toggle', 'modal');
         button.innerText = pokemon.name.toUpperCase();
         button.classList.add('pokemonbutton');
         button.addEventListener('click', function (event) {
@@ -47,6 +64,7 @@ let pokemonRepository = (function () {
             pokeList.classList.toggle('invisible');
         })
         listItem.appendChild(button);
+        pokeList.appendChild(pokemonNumber);
         pokeList.appendChild(listItem);
     }
     // Fetch api data and convert to json, then assign data and add pokemon
