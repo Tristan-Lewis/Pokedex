@@ -1,5 +1,14 @@
+@font-face {
+    font-family: 'pokemon_gbregular';
+    src: url('../assets/pokemongb-raeo.woff2') format('woff2'),
+        url('../assets/pokemongb-raeo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
-    font-family: 'Press Start 2P', cursive;
+    font-family: "pokemon_gbregular";
     background-color: rgb(189, 0, 25);
 }
 
@@ -9,6 +18,8 @@ body {
 }
 
 h1 {
+    font-family: "pokemon_gbregular";
+    font-weight: bold;
     text-align: center;
 }
 .pokedex-display-border {
