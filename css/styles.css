@@ -13,10 +13,6 @@ body {
     color: black;
 }
 
-* {
-    overflow: hidden;
-}
-
 h1 {
     font-family: "pokemon_gbregular";
     font-weight: bold;
