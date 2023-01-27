@@ -97,6 +97,25 @@ let pokemonRepository = (function () {
             console.error(e);
         })
     }
+    // Matches button inner text to input value and clicks button if there is a match
+    let searchButton = document.querySelector('.searchbutton');
+    searchButton.addEventListener('click', searchPokemon);
+
+    function searchPokemon() {
+        let searchInput = document.querySelector('.searchinput');
+        let pokemonButtons = document.querySelectorAll('.pokemonbutton');
+        let inputValue = searchInput.value.toUpperCase();
+
+        for (let i = 0; i < pokemonButtons.length; i++) {
+            if (inputValue = pokemonButtons[i].innerText) {
+                pokemonButtons[i].click();
+            }
+
+            else {
+                alert("Could not find any pokemon with that name");
+            }
+        }
+    }
 
     return {
         add: add,
@@ -104,6 +123,7 @@ let pokemonRepository = (function () {
         showDetails: showDetails,
         addListItem: addListItem,
         loadList: loadList,
+        searchPokemon: searchPokemon,
         loadDetails: loadDetails
     };
 
