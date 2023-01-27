@@ -15,7 +15,6 @@ let pokemonRepository = (function () {
     //Load API info, construct and show modal
     function showDetails(pokemon) {
         loadDetails(pokemon).then(function showModal(item) {
-            let modalHeader = $('.modal-header');
             let modalTitle = $('.modal-title');
             let modalBody = $('.modal-body');
             modalTitle.empty();
@@ -74,8 +73,7 @@ let pokemonRepository = (function () {
             json.results.forEach(function (item) {
                 let pokemon = {
                     name: item.name,
-                    detailsUrl: item.url,
-                    number: item.id
+                    detailsUrl: item.url
                 };
                 add(pokemon);
             });
@@ -92,7 +90,7 @@ let pokemonRepository = (function () {
             item.imageUrl = details.sprites.versions["generation-i"]["red-blue"].front_default
             item.height = details.height;
             item.weight = details.weight;
-            item.types = details.types;
+
         }).catch(function (e) {
             console.error(e);
         })
