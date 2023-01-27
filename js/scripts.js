@@ -25,12 +25,12 @@ let pokemonRepository = (function () {
             pokemonImage.attr('src', pokemon.imageUrl);
             let pokemonName = $('<h1 class="pokemonName">' + pokemon.name.toUpperCase() + '</h1>');
             let pokemonHeight = $('<p class="pokemonHeight">HT ' + pokemon.height + 'm</p>');
-            let pokemonWeight = $('<p class="pokemonWeight">WT' + pokemon.weight + 'lbs</p>');
+            let pokemonWeight = $('<p class="pokemonWeight">WT ' + pokemon.weight + 'lbs</p>');
 
             modalTitle.append(pokemonImage);
             modalTitle.append(pokemonName);
-            modalBody.append(pokemonHeight);
-            modalBody.append(pokemonWeight);
+            modalTitle.append(pokemonHeight);
+            modalTitle.append(pokemonWeight);
         });
 
 
@@ -41,7 +41,7 @@ let pokemonRepository = (function () {
         let listItem = document.createElement('li');
         let pokemonNumber = document.createElement('p');
         let button = document.createElement('button');
-
+        // Creates A 3 digit pokemon number associated with every pokemon button
         if (numberCounter < 10) {
             pokemonNumber.innerText = "00" + numberCounter;
         }
@@ -58,7 +58,7 @@ let pokemonRepository = (function () {
         button.setAttribute('data-target', '#pokemonModal');
         button.setAttribute('data-toggle', 'modal');
         button.innerText = pokemon.name.toUpperCase();
-        button.classList.add('pokemonbutton', 'btn', 'btn-primary');
+        button.classList.add('pokemonbutton', 'btn', 'btn-dark');
         button.addEventListener('click', function () {
             showDetails(pokemon);
         })
