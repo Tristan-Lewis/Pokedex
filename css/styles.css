@@ -34,6 +34,47 @@ p {
     text-align: left;
     font-size: xx-large;
     padding-left: 5%;
+    margin: 0;
+}
+
+.navbar {
+    background-color: whitesmoke;
+}
+
+.pokemonImage {
+    display: block;
+    scale: 3;
+    float: left;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+.pokemonName {
+    text-align: center;
+}
+
+.pokemonHeight {
+    display: block;
+    text-align: left;
+    margin-left: 37%;
+    padding: 0;
+
+}
+
+.pokemonWeight {
+    display: block;
+    text-align: left;
+    margin-left: 37%;;
+    padding: 0;
+}
+
+.modal-footer {
+    padding: 0;
+    border-top: none;
+}
+
+.modal-header {
+    display: block;
 }
 
 nav.navbar {
@@ -64,7 +105,7 @@ a.navbar-brand {
     display: none;
 }
 .pokemonbutton {
-    margin: 20px auto;
+    margin: 10px auto;
     background: none;
     border: none;
     font-size: xx-large;
