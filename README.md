@@ -1,6 +1,6 @@
 # Pokedex web app
 
-This retro themed javascript web app allows you navigate a list of the original 151 pokemon, and view modals containing information dynamically pulled from an API.
+This retro themed javascript web app allows you navigate a list of the original 151 pokemon and view modals containing information dynamically pulled from an API.
 
 This project is currently deployed on [GitHub Pages](https://majestysfiend.github.io/Pokedex/)
 
@@ -29,7 +29,7 @@ This project is currently deployed on [GitHub Pages](https://majestysfiend.githu
 
 1. When the search button is clicked, the input value is converted to uppercase and stored in a variable.
 2. All buttons are looped through.
-3. If the input value variable matches the button text, the button is clicked in the list and the loop ends.
+3. If the input value variable matches the button text, the button is clicked in the list and opens a modal.
 
 ## Credits
 
