@@ -120,6 +120,13 @@ a.navbar-brand {
     color:rgb(20, 20, 20);
 }
 
+.pokemonbutton:hover {
+    scale: 1.15;
+}
+
+.searchbutton:hover {
+    scale: 1.15;
+}
 @media all and (max-width: 1480px) {
     .pokedex-display {
         height: 59vw;
