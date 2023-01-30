@@ -105,12 +105,8 @@ let pokemonRepository = (function () {
         let inputValue = searchInput.value.toUpperCase();
 
         for (let i = 0; i < pokemonButtons.length; i++) {
-            if (inputValue = pokemonButtons[i].innerText) {
+            if (inputValue == pokemonButtons[i].innerText) {
                 pokemonButtons[i].click();
-            }
-
-            else {
-                alert("Could not find any pokemon with that name");
             }
         }
     }
