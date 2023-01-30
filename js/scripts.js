@@ -109,7 +109,7 @@ let pokemonRepository = (function () {
         let inputValue = searchInput.value.toUpperCase();
 
         for (let i = 0; i < pokemonButtons.length; i++) {
-            if (inputValue == pokemonButtons[i].innerText) {
+            if (pokemonButtons[i].innerText == inputValue) {
                 pokemonButtons[i].click();
             }
         }
