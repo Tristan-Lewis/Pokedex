@@ -28,7 +28,7 @@ let pokemonRepository = (function () {
             let pokemonHeight = $('<p class="pokemonHeight">Height ' + pokemon.height + 'm</p>');
 
             pokemon.weight = (pokemon.weight / 10);
-            let pokemonWeight = $('<p class="pokemonWeight">Weight ' + pokemon.weight + 'kg</p>');
+            let pokemonWeight = $(`<p class="pokemonWeight">Weight ${pokemon.weight}kg</p>`);
 
             modalTitle.append(pokemonImage);
             modalTitle.append(pokemonName);
