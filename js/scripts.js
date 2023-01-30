@@ -23,8 +23,12 @@ let pokemonRepository = (function () {
             let pokemonImage = $('<img class="modal-img pokemonImage">');
             pokemonImage.attr('src', pokemon.imageUrl);
             let pokemonName = $('<h1 class="pokemonName">' + pokemon.name.toUpperCase() + '</h1>');
-            let pokemonHeight = $('<p class="pokemonHeight">HT ' + pokemon.height + 'm</p>');
-            let pokemonWeight = $('<p class="pokemonWeight">WT ' + pokemon.weight + 'lbs</p>');
+
+            pokemon.height = (pokemon.height / 10);
+            let pokemonHeight = $('<p class="pokemonHeight">Height ' + pokemon.height + 'm</p>');
+
+            pokemon.weight = (pokemon.weight / 10);
+            let pokemonWeight = $('<p class="pokemonWeight">Weight ' + pokemon.weight + 'kg</p>');
 
             modalTitle.append(pokemonImage);
             modalTitle.append(pokemonName);
