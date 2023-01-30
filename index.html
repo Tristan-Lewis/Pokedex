@@ -14,45 +14,45 @@
 
     <body>
         <main>
-            <div class="pokedex-display container-fluid">
-                <nav class="navbar navbar-light bg-light">
-                    <a class="navbar-brand" href="#top">
-                        <img src="./assets/pokeBallIcon.png" class="d-inline-block align-top" alt="pokeball image"
-                            aria-hidden>
-                        Pokedex
-                    </a>
-                    <form class="search-wrapper">
-                        <label for="search"></label>
-                        <input type="search" class="searchinput" placeholder="Type name here!" data-search>
-                        <button class="btn btn-dark searchbutton">Search</button>
-                    </form>
-                </nav>
-                <div id="modal-container"></div>
-                <ul class="pokemon-list list-group" id="top">
-                    <h2>CONTENTS</h2>
-                </ul>
-                <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModal"
-                    aria-hidden="true">
-                    <div class="modal-dialog modal-lg" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close btn btn-light" data-dismiss="modal"
-                                    aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <div class="modal-title">
-                                </div>
-                                <div class="modal-body">
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+            <div class="relativeContainer">
+                <div class="pokedex-display container-fluid">
+                    <nav class="navbar navbar-light bg-light">
+                        <a class="navbar-brand" href="#top">
+                            <img src="./assets/pokeBallIcon.png" class="d-inline-block align-top" alt="pokeball image"
+                                aria-hidden>
+                            Pokedex
+                        </a>
+                        <form class="search-wrapper">
+                            <input type="search" class="searchinput" placeholder="Type name here!" data-search>
+                            <button class="btn btn-dark searchbutton">Search</button>
+                        </form>
+                    </nav>
+                    <div id="modal-container"></div>
+                    <ul class="pokemon-list list-group" id="top">
+                        <h2>CONTENTS</h2>
+                    </ul>
+                    <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModal"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close btn btn-light" data-dismiss="modal"
+                                        aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <div class="modal-title">
+                                    </div>
+                                    <div class="modal-body">
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </main>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
