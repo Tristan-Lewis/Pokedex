@@ -21,15 +21,14 @@
                             aria-hidden>
                         Pokedex
                     </a>
-                    <form action="" class="search-wrapper">
+                    <form class="search-wrapper">
                         <label for="search"></label>
-                        <input type="search" class="searchinput" id="search-input" placeholder="Type name here!"
-                            data-search>
-                        <button class="btn btn-dark searchbutton" id="search-button">Search</button>
+                        <input type="search" class="searchinput" placeholder="Type name here!" data-search>
+                        <button class="btn btn-dark searchbutton">Search</button>
                     </form>
                 </nav>
-                <div id="modal-container container-fluid"></div>
-                <ul class="pokemon-list list-group">
+                <div id="modal-container"></div>
+                <ul class="pokemon-list list-group" id="top">
                     <h2>CONTENTS</h2>
                 </ul>
                 <div class="modal fade" id="pokemonModal" tabindex="-1" role="dialog" aria-labelledby="pokemonModal"
@@ -42,10 +41,8 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                                 <div class="modal-title">
-
                                 </div>
                                 <div class="modal-body">
-
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
