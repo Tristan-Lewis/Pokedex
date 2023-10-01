@@ -1,4 +1,4 @@
-# Pokedex web app
+<h1 align="center">Pokedex web app</h1>
 
 ![pokedex](https://github.com/Tristan-Lewis/Pokedex/assets/94727522/6da38481-4265-4546-9534-98af13b32d3b)
 
