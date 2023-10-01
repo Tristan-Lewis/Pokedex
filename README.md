@@ -1,5 +1,8 @@
 # Pokedex web app
 
+![pokedex](https://github.com/Tristan-Lewis/Pokedex/assets/94727522/6da38481-4265-4546-9534-98af13b32d3b)
+
+
 This retro themed javascript web app allows you navigate a list of the original 151 pokemon and view modals containing information dynamically pulled from an API.
 
 This project is currently deployed on [GitHub Pages](https://majestysfiend.github.io/Pokedex/)
